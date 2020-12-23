@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template: 6fr 3fr 1fr / 1fr;
+    overflow-x: hidden;
+}
+
+.main {
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+.main-left {
+    display: grid;
+    grid-template: 2fr 4fr / 1fr;
+    padding: 5px;
+}
+
+.main-right {
+    grid-column: 2/3;
+    overflow: hidden;
+}
+
+.files-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.emails_maker {
+    display: flex;
+    justify-content: space-around;
+}
+
+.emails_maker input {
+    width: 60%;
+    margin: 5px;
+}
+
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.emails_wrapper {
+    width: 100%;
+    height: 100%;
+}
+#emailsList {
+    box-shadow: 5px 0 2px rgba(0, 0, 0, 0.5) inset;
+    padding: 2rem;
+    resize: none;
+    border: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 100%;
+    width: 100%;
+    outline: none;
+    line-height: 1.5rem;
+}
+
+.msg_wrapper {
+    width: auto;
+    height: 100%;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+.msg textarea {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    padding: 2rem;
+    resize: none;
+    border: none;
+    overflow-y: auto;
+}
+
+.panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+    /*      INPUTS       */
+
+
+.excel-input-wrapper,
+.files-input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.excel-input-wrapper label,
+.files-input-wrapper label {
+    text-align: center;
+}
+
+#excelFile,
+#files {
+    width: 10px;
+    height: 10px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+
+
+#excelFile + label {
+    width: 50%;
+    color: #006868;
+    border-bottom: 2px solid #05B3B2;
+    display: inline-block;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    transition: all 0.5s;
+}
+
+#excelFile + label:hover {
+    color: #FF3221;
+}
+
+.files-input-wrapper {
+    width: 30%;
+    height: 50%;
+    margin-left: 2rem;
+}
+
+#files + label {
+    width: 100%;
+    color: #006868;
+    border-bottom: 2px solid #05B3B2;
+    display: inline-block;
+    cursor: pointer;
+    padding: .5rem 1rem;
+    transition: all 0.5s;
+}
+
+#files + label:hover {
+    color: #FF3221;
+}
+
+input[type="text"],
+input[type="password"] {
+    outline: none;
+    padding: 0.5rem;
+    display: block;
+    border-width: 0;
+    border-bottom: 0.5px solid grey;
+    opacity: 0.4;
+    transition: all .3s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-bottom: 1.5px solid rgb(236, 121, 55);
+    opacity: 1;
+    margin-top: -1px;
+}
+
+
+        /*      BUTTONS      */
+
+
+#sendEmailsButton {
+    padding: 5px 15px;
+    border: 2px solid rgb(236, 121, 55);
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    outline: none;
+    transition: all .3s ease-out;
+    margin-right: 2rem;
+}
+
+#sendEmailsButton:hover {
+    background-color: rgb(236, 121, 55);
+    color: white;
+    box-shadow: 0 0 10px 5px rgba(236, 121, 55, 0.5);
+}
+
+#makeRecipientsButton {
+    margin: 10px;
+    padding: 5px 15px;
+    border: 2px solid rgb(236, 121, 55);
+    background-color: #fff;
+    color: black;
+    border-radius: 10px;
+    outline: none;
+    transition: all .3s ease-out;
+}
+
+#makeRecipientsButton:hover {
+    background-color: rgb(236, 121, 55);
+    color: white;
+    box-shadow: 0 0 10px 5px rgba(236, 121, 55, 0.5);
+}

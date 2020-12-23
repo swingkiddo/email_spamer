@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+    <link rel="stylesheet" href="./index.css">
+    <title>Mailing App</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="main">
+        <div class="main-left">
+
+          <div class="files-wrapper">
+            <div class="excel-input-wrapper">
+              <input class="inputs" id="excelFile" name="table" type="file">
+              <label for="excelFile">Выберите таблицу</label> 
+            </div>
+            <div class="emails_maker">
+              <input id="column" name="column" type="text" placeholder="Колонка">
+              <input id="sheet" name="sheet" type="text" placeholder="Лист">
+              <button id="makeRecipientsButton">Составить</button>
+            </div>
+          </div>
+          
+          <div class="info">
+            <input id="from" name="from" type="text" placeholder="Email">
+            <input id="password" name="password" type="password" placeholder="Пароль">
+            <input id="sender" name="sender" type="text" placeholder="От:">
+            <input id="subject" name="subject" type="text" placeholder="Тема:">
+          </div>
+
+        </div>
+        <div class="main-right">
+          <div class="emails_wrapper">
+            <textarea name="emailsList" id="emailsList" cols="30" rows="10" placeholder="Список получателей:" spellcheck="false"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg">
+        <div class="msg_wrapper">
+            <textarea id="text" name="text" id="" cols="30" rows="10" placeholder="Введите сообщение" spellcheck="false"></textarea>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="files-input-wrapper">
+          <input class="inputs" id="files" name="files" type="file" data-multiple-caption="{count} files selected" multiple>
+          <label for="files">Выберите файлы</label>
+        </div>
+        <div><button id="sendEmailsButton">Отправить</button></div>
+      </div>
+
+    </div>
+    <script type="module" src="./index.js"></script>
+    <script src="./renderer.js"></script>
+  </body>
+</html>
